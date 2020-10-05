@@ -1,4 +1,6 @@
-  
+//Ways of search
+//busquedaOrdenada=Orderly search
+//busquedaBinaria=Binary search
 #include <iostream>
 #include <vector>
 #include <chrono>
