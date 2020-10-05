@@ -1,10 +1,8 @@
-//Actividad 2: Recursión
-//Imanol García
-//Bernardo Reyes
+//Recursive exercises
 #include <iostream>
 
 using namespace std;
-//Ejercicio 1:
+//SUM
 int operation;
 int Sum (int x, int n)
 {
@@ -19,7 +17,6 @@ int Sum (int x, int n)
     }
 }
 
-//Ejercicio 2: 
 int Power (int x, int n)
 {
     if (n==0)
@@ -33,7 +30,6 @@ int Power (int x, int n)
     }
 }
 
-//Ejercicio 5:
 int fibSeries(int n)
 {
     if(n <= 1)
@@ -47,7 +43,6 @@ int fibSeries(int n)
     }   
 };
 
-//Ejercicio 6:
 int sumDigitNum (int num)
 {  
     if(num == 0)
@@ -63,18 +58,18 @@ int sumDigitNum (int num)
 
  int main()
  {
-     cout << "el resultado de la suma es: " << Sum(2,100) << endl;
+     cout << "Result of the sum: " << Sum(2,100) << endl;
 
-     cout << "el resultado de la potencia es: " << Power(2,3) << endl;
+     cout << "Result of the power: " << Power(2,3) << endl;
 
-     cout << "el resultado del primer término de la serie de fibonacci es: " << fibSeries(0) << endl;
-     cout << "el resultado del segundo término de la serie de fibonacci es: " << fibSeries(1) << endl;
-     cout << "el resultado del tercer término de la serie de fibonacci es: " << fibSeries(2) << endl;
-     cout << "el resultado del cuarto término de la serie de fibonacci es: " << fibSeries(3) << endl;
-     cout << "el resultado del quinto término de la serie de fibonacci es: " << fibSeries(4) << endl;
-     cout << "el resultado del sexto término de la serie de fibonacci es: " << fibSeries(5) << endl;
+     cout << "Result of the first term of the fibonacci serie is: " << fibSeries(0) << endl;
+     cout << "Result of the second term of the fibonacci serie is: " << fibSeries(1) << endl;
+     cout << "Result of the third term of the fibonacci serie is: " << fibSeries(2) << endl;
+     cout << "Result of the fourth term of the fibonacci serie is " << fibSeries(3) << endl;
+     cout << "Result of the fifth term of the fibonacci serie is: " << fibSeries(4) << endl;
+     cout << "Result of the sixth term of the fibonacci serie is: " << fibSeries(5) << endl;
 
-     cout << "La suma de los digitos es: " << sumDigitNum(123) << endl;
-     cout << "La suma de los digitos es: " << sumDigitNum(1027) << endl;
-     cout << "La suma de los digitos es: " << sumDigitNum(43) << endl;
+     cout << "The sum of the digits is: " << sumDigitNum(123) << endl;
+     cout << "The sum of the digits is: " << sumDigitNum(1027) << endl;
+     cout << "The sum of the digits is: " << sumDigitNum(43) << endl;
  }
