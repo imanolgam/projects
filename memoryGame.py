@@ -13,14 +13,14 @@ raiz = 1
 
 def memorama():
     imprimir()
-    print('Jugador 1')
+    print('Player 1')
 
-    x = int(input('Ingresa x de tu primer carta: '))
+    x = int(input('Enter x of your first card: '))
     if x > 5:
         print('ERROR')
         memorama()
 
-    y = int(input('Ingresa y de tu primer carta: '))
+    y = int(input('Enter y of your first card: '))
     if y > 5:
         print('ERROR')
         memorama()
@@ -29,13 +29,13 @@ def memorama():
 
     imprimir()
 
-    x2 = int(input('Ingresa x de tu segunda carta: '))
+    x2 = int(input('Enter x of your second card: '))
     if x2 > 5:
         print('ERROR')
         cerrada[x][y] = '-'
         memorama()
     else:
-        y2 = int(input('Ingresa y de tu segunda carta: '))
+        y2 = int(input('Enter y of your second card: '))
         if y2 > 5:
             print('ERROR')
             cerrada[x][y] = '-'
@@ -49,14 +49,14 @@ def memorama():
 
 def memorama2():
     imprimir()
-    print('Jugador 2')
+    print('Player 2')
 
-    x = int(input('Ingresa un valor en la horizontal: '))
+    x = int(input('Enter horizontal value: '))
     if x > 5:
         print('ERROR')
         memorama2()
 
-    y = int(input('Ingresa un valor en la vertical: '))
+    y = int(input('Enter vertical value: '))
     if y > 5:
         print('ERROR')
         memorama2()
@@ -65,13 +65,13 @@ def memorama2():
 
     imprimir()
 
-    x2 = int(input('Ingresa un valor en la horizontal: '))
+    x2 = int(input('Enter horizontal value: '))
     if x2 > 5:
         print('ERROR')
         cerrada[x][y] = '-'
         memorama2()
     else:
-        y2 = int(input('Ingresa un valor en la vertical: '))
+        y2 = int(input('Enter vertical value: '))
         if y2 > 5:
             print('ERROR')
             cerrada[x][y] = '-'
@@ -88,20 +88,20 @@ def condiciones(x,y,x2,y2):
     if cerrada[x][y] != abierta[x2][y2]:##si ya esta abierta
         cerrada[x2][y2] = "-"
         cerrada[x][y] = "-"
-        respuesta = str(input('¿Quiere seguir jugando? si/no: '))
+        respuesta = str(input('Contnue playing? si/no: '))
         if respuesta == 'si':
             memorama2()
         elif respuesta == 'no':
-            print('El jugador tiene',p1,'pares')
-            print('El jugador tiene',p2,'pares')
+            print('The player has',p1,'pairs')
+            print('The player has',p2,'pairs')
             if p1 > p2:
-                print('El ganador fue el jugador 1')
+                print('The winner is player 1')
             elif p2 > p1:
-                print('El ganador fue el jugador 2')
+                print('The winner is player 2')
             elif p2 == p1:
-                print('Fue un empate!')
+                print('Tie!')
             elif p1 == p2:
-                print('Fue un empate!')
+                print('Tie!')
             sys.exit()    
     else:
         p1 += 1 
@@ -112,7 +112,7 @@ def condiciones2(x,y,x2,y2):
     if cerrada[x][y] != cerrada[x2][y2]:
         cerrada[x2][y2] = "-"
         cerrada[x][y] = "-"
-        respuesta = str(input('¿Quiere seguir jugando? si/no: '))
+        respuesta = str(input('Continue playing? si/no: '))
         if respuesta == 'si':
             memorama()
 
@@ -120,13 +120,13 @@ def condiciones2(x,y,x2,y2):
             print(p1)
             print(p2)
             if p1 > p2:
-                print('El jugador tiene',p1,'pares')
+                print('The player has',p1,'pairs')
             elif p2 > p1:
-                print('El jugador tiene',p2,'pares')
+                print('The player has',p2,'pairs')
             elif p2 == p1:
-                print('Fue un empate!')
+                print('Tie!')
             elif p1 == p2:
-                print('Fue un empate!')
+                print('Tie!')
             sys.exit()
     else:
         p2 += 1
