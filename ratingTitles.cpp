@@ -1,10 +1,12 @@
+//pelicula=film
+//
 #include <stdlib.h>
 #include <ctime> 
 #include <iostream>
 
 using namespace std;
 #pragma once
-//clase padre
+
 class Video
 {
 protected:
@@ -65,7 +67,7 @@ void Video::mostrar(){
 
 void Video::calificar(){
     float estrellas=0;
-    cout<<"¿Qué calificación le das a este título? Siendo 1 el mínimo y 5 el máximo"<<endl;
+    cout<<"What qualification do you giive to this title? Being 1 the min and 5 the max number"<<endl;
     cin>>estrellas; 
     calificacion=estrellas;
 }
@@ -122,19 +124,19 @@ int main()
     int answer;
     string n="si";
     Video *vector[3];
-    vector[0]=new Pelicula (2564,"Club de la Pelea","acción",4.5,"1:33");
-    vector[1]=new Pelicula (2324,"Avengers:Endgame","superhéroes, aventura",5,"2:55");
-    vector [2]=new Temporadas (2323,"Suits","negocios",4.8,1,1,3,"\n 1. Volviendo al Futuro \n 2. Zane vs Zane \n 3. Specter regresó");
-    vector [3]=new Temporadas (4545,"The Good Doctor","ciencia, investigación",4.6,1,1,4,"\n 1. El gran hallazgo\n 2. No podrás con él\n 3. El gran sufrimiento\n 4. La gran catástrofe");
-    cout<<"Lista de peliculas:\n1. Club de la Pelea\n2. Avengers:Endgame\n\nLista de series:\n3. Suits\n4. The Good Doctor"<<endl;
+    vector[0]=new Pelicula (2564,"Fight Club","action",4.5,"1:33");
+    vector[1]=new Pelicula (2324,"Avengers:Endgame","superheroes, adventure",5,"2:55");
+    vector [2]=new Temporadas (2323,"Suits","business",4.8,1,1,3,"\n 1. Back to the future \n 2. Zane vs Zane \n 3. Specter came back");
+    vector [3]=new Temporadas (4545,"The Good Doctor","science, research",4.6,1,1,4,"\n 1. The big find\n 2. You won't be able with him\n 3. The Great Pain\n 4. The great catastrophe");
+    cout<<"List of movies:\n1. Fight club\n2. Avengers:Endgame\n\nList of series: series:\n3. Suits\n4. The Good Doctor"<<endl;
     cout<<"\n";
-    cout<<"¿Deseas calificar alguno de estos titulos? Escribe si o no"<<endl;
+    cout<<"Would you like to rate some of this litles? Escribe si o no"<<endl;
     cin>>respuesta;
     while (n=="si")
     {
         if (respuesta=="si")
         {
-            cout<<"Escribe el número de acuerdo a la lista anterior del título que deseas calificar"<<endl;
+            cout<<"Write the number of the title you would like to rate according to the printed list"<<endl;
             cin>>answer;
             if (answer ==1)
             {
@@ -153,7 +155,7 @@ int main()
                 vector[3]->calificar();
             }
         }
-        cout<<"¿Deseas calificar más títulos? si/no"<<endl;
+        cout<<"Would you like to rate more titles? si/no"<<endl;
         cin>>n;
     }
     vector [0]->mostrar();
@@ -163,6 +165,6 @@ int main()
     vector[2]->mostrar();
     cout<<"\n";
     vector [3]->mostrar();
-    delete [] vector[3];//Liberar memoria
+    delete [] vector[3];
     return 0;
 }
